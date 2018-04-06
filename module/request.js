@@ -61,8 +61,7 @@ Request.prototype._headers = function() {
 
     return {
         'Accept': 'application/json',
-        'Authorization': 'Bearer ' + self.clientAccessToken,
-        'api-request-source': self.requestSource
+        'Authorization': 'Bearer ' + self.clientAccessToken
     };
 };
 
@@ -71,7 +70,7 @@ Request.prototype._requestOptions = function() {
 
     return {
         hostname: self.hostname,
-        headers: self._headers(),
+        headers: self._headers()
     };
 };
 
